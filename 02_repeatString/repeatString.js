@@ -1,13 +1,18 @@
 const repeatString = function(string, num) {
-    // create a loop that runs num times
-    for (i=0, i<num, i++){
 
+    let result = '';
+    if (num < 0){
+       result = "ERROR"
     }
-    // create a new string
-    let str1 = string.slice(); 
 
+    for (i=0; i<num; i++){
+        result = result + string;
+    }
+
+    return result;
+    // create a loop that runs num times
+    // create a new string
     // concatenate the string
-    let string = string + str1;
 };
 
 // Do not edit below this line
