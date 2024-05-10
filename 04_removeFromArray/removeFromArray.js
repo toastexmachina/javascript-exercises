@@ -2,12 +2,13 @@ const removeFromArray = function(array, elements) {
     // function to remove element from an array and 
     // return the edited array
 
-    while true {
+    while (true) {
         let index = array.indexOf(elements);
+        if (index === -1) break;
         array.splice(index,1);
-        return array;
     }
 
+    return array;
     /*
     // while loop
     while true {
