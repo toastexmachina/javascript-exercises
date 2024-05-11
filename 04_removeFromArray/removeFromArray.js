@@ -1,25 +1,23 @@
-const removeFromArray = function(array, elements) {
+const removeFromArray = function(array, ...elements) {
     // function to remove element from an array and 
     // return the edited array
 
+    for (element of elements) {
+        let index = array.indexOf(element);
+        if (index===-1) continue;
+        array.splice(index,1); 
+    }
+
+    return array;
+
+    // Works only for single parameter
+    /*
     while (true) {
-        let index = array.indexOf(elements);
+        let index = array.indexOf(element);
         if (index === -1) break;
         array.splice(index,1);
     }
 
-    return array;
-    /*
-    // while loop
-    while true {
-
-    }
-    // indexOf to find specified element
-    let index = array.indexOf(elements);    
-    // remove element each iteration
-    array.splice(index, 1);
-    // when indexOf returns undefined -> break
-    // return edited array
     return array;
     */
 };
